@@ -1,0 +1,24 @@
+/* color palette (darkest to lightest)
+#14110f
+#34312d
+#7e7f83
+#d9c5b2
+#f3f3f4
+ */
+
+body {
+    font-family: "Avenir Next";
+    color: #7e7f83;
+    background-color: #f3f3f4;
+    text-align: center
+}
+
+.initdescription {
+    font-size: large;
+    text-align: center
+}
+
+h1, h2, h3, h4 {
+    text-align: center;
+    color: #34312d
+}

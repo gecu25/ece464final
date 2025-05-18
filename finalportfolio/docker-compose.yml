@@ -1,0 +1,24 @@
+services:
+  db:
+    image: postgres
+    restart: always
+    ports:
+      - "5439:5432"
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: ece464
+      POSTGRES_DB: foliodb
+
+  dash:
+    build: .
+    container_name: dash_app
+    depends_on:
+      - db
+    environment:
+      - CHROME_BIN=/usr/bin/google-chrome
+      - CHROMEDRIVER_BIN=/usr/bin/chromedriver
+      - DATABASE_URL=postgresql://user:ece464@db:5432/foliodb
+    ports:
+      - "8050:8050"
+
+# docker run -d --name fulldbtest -p 5439:5432 -e POSTGRES_PASSWORD=ece464 -e POSTGRES_DB=mydb postgres

@@ -1,0 +1,13 @@
+matplotlib
+numpy
+pandas
+sqlalchemy
+psycopg2-binary
+alembic
+yfinance
+selenium
+bs4
+requests
+beautifulsoup4
+dash
+dash_bootstrap_components
